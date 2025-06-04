@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trocando de Perspectiva</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px 15px;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .form-wrapper {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      max-width: 720px;
+      width: 100%;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1em;
+      background: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #6a11cb;
+      background: #fff;
+      outline: none;
+      box-shadow: 0 0 6px rgba(106, 17, 203, 0.3);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin-top: 5px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-wrapper">
+    <h1>Trocando de Perspectiva</h1>
+
+    <form action="https://formsubmit.co/tomzinhuva@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nova resposta da pesquisa sobre bullying">
+      <input type="hidden" name="_template" value="table">
+
+      <label>1. Você já presenciou algum caso de bullying?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="bullyingPresenciado" value="Sim" required> Sim</label>
+        <label><input type="radio" name="bullyingPresenciado" value="Não"> Não</label>
+      </div>
+
+      <label>2. Você já sofreu bullying?</label>
+      <select name="sofreuBullying" required>
+        <option value="">Selecione</option>
+        <option value="Frequentemente">Sim, frequentemente</option>
+        <option value="Às vezes">Sim, algumas vezes</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <label>3. Que tipo de bullying você já sofreu? (se aplicável)</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="tipoBullying[]" value="Verbal"> Verbal</label>
+        <label><input type="checkbox" name="tipoBullying[]" value="Físico"> Físico</label>
+        <label><input type="checkbox" name="tipoBullying[]" value="Virtual"> Virtual</label>
+        <label><input type="checkbox" name="tipoBullying[]" value="Exclusão social"> Exclusão social</label>
+        <label><input type="checkbox" name="tipoBullying[]" value="Outro"> Outro</label>
+      </div>
+
+      <label>4. O que você costuma fazer ao presenciar bullying?</label>
+      <input type="text" name="reacaoPresenciar" placeholder="Descreva aqui...">
+
+      <label>5. Você acha que os agressores têm noção do impacto?</label>
+      <select name="nocaoImpacto" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+        <option value="Às vezes">Às vezes</option>
+      </select>
+
+      <label>6. Você costuma se colocar no lugar do outro?</label>
+      <select name="empatia" required>
+        <option value="">Selecione</option>
+        <option value="Sempre">Sempre</option>
+        <option value="Às vezes">Às vezes</option>
+        <option value="Raramente">Raramente</option>
+        <option value="Nunca">Nunca</option>
+      </select>
+
+      <label>7. Quão confortável você se sente em ajudar alguém isolado? (1 a 5)</label>
+      <select name="confortoAjuda" required>
+        <option value="">Selecione</option>
+        <option value="1">1 - Nada confortável</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 - Muito confortável</option>
+      </select>
+
+      <label>8. O que você acha que poderia ser feito para combater o bullying?</label>
+      <textarea name="solucoes" rows="3" required></textarea>
+
+      <label>9. Você acha que empatia ajuda a diminuir o bullying? Por quê?</label>
+      <textarea name="empatiaAjuda" rows="3" required></textarea>
+
+      <button type="submit">Enviar Respostas</button>
+    </form>
+  </div>
+</body>
+</html>

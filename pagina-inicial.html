@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesquisa sobre Bullying e Empatia</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 550px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2b2d42;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin: 10px auto 25px;
+      display: block;
+      font-size: 1em;
+    }
+
+    a.button {
+      display: inline-block;
+      background: linear-gradient(45deg, #00c9ff, #92fe9d);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    a.button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .emoji {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji">💬❤️</div>
+    <h1>Vamos conversar sobre empatia</h1>
+    <p>
+      Sua opinião é muito importante! Ajude-nos a entender melhor como o bullying afeta as pessoas e o papel da empatia nisso tudo.
+    </p>
+
+    <label for="ano">Informe seu ano escolar:</label>
+    <input type="text" id="ano" name="ano" placeholder="Ex: 8º ano, 1º EM, etc." />
+
+    <a class="button" onclick="irParaPesquisa()">Participar da pesquisa</a>
+  </div>
+
+  <script>
+    function irParaPesquisa() {
+      const ano = document.getElementById("ano").value.trim();
+      const url = "pesquisa.html" + (ano ? `?ano=${encodeURIComponent(ano)}` : "");
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
