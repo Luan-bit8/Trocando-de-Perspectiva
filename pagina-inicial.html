@@ -2,15 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bem-vindo ao Site da Pesquisa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesquisa sobre Bullying e Empatia</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #74ebd5, #9face6);
-      color: #333;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,36 +21,29 @@
       background: white;
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      animation: fadeIn 1s ease;
-      max-width: 500px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.8s ease-in-out;
     }
 
     h1 {
+      color: #333;
       margin-bottom: 20px;
-      color: #444;
     }
 
-    p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
-
-    a.button {
+    .start-button {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 14px 28px;
       background: linear-gradient(45deg, #6a11cb, #2575fc);
       color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1em;
       text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1em;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    a.button:hover {
+    .start-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
 
     @keyframes fadeIn {
@@ -62,9 +54,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>Pesquisa sobre Bullying e Empatia</h1>
-    <p>Esta pesquisa é anônima e tem o objetivo de entender melhor a relação entre bullying e empatia. Sua participação é muito importante!</p>
-    <a href="formulario.html" class="button">Começar Pesquisa</a>
+    <h1>Bem-vindo à Pesquisa</h1>
+    <a href="formulario.html" class="start-button">Começar a Pesquisa</a>
   </div>
 </body>
 </html>
